@@ -1,0 +1,86 @@
+{
+  "name": "darkmode.science",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "9.1.3",
+    "now": "^16.5.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "tachyons": "^4.10.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/prop-types": "off",
+      "import/prefer-default-export": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/jsx-closing-tag-location": "off",
+      "no-bitwise": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "proseWrap": "always",
+    "arrowParens": "always",
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src}/**/*.{js,jsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
