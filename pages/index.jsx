@@ -44,7 +44,7 @@ const Content = () => (
           to just turn a light on and work in a light environment.
         </p>
         <Details>
-          Your cillary muscle must work harder to allow more light in when
+          Your iris sphincter muscle must work harder to allow more light in when
           you&apos;re focusing on a dark screen. However if your environment is
           bright then too much light from the surroundings will bleed in. This
           results in both your cillary muscle working extra hard to allow more
